@@ -169,7 +169,7 @@ export const render = ({ timeZoneMap, currentTime }) => {
     let items = []
     const currentHour = currentTime.getHours();
     for (let h=currentHour - hoursBefore; h <= currentHour + hoursAfter; h++) {
-        const realH = h % 24; // Deal with negative hours
+        const realH = ((h % 24) + 24) % 24; // Deal with negative hours
         const realHFormatted = realH.toLocaleString('default', {minimumIntegerDigits: 2});
         const timeZones = (timeZoneMap[realHFormatted] || [])
         const timeZoneItems = <div className={tz}>{timeZones.join(",")}</div>;
