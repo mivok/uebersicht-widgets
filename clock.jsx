@@ -127,6 +127,7 @@ const hour = css`
             rgba(221, 221, 221, 0)
         ) 1;
         border-right: 0;
+        border-left: 0;
     }
 
     &:last-child {
@@ -141,6 +142,7 @@ const hour = css`
             rgba(221, 221, 221, 0)
         ) 1;
         border-left: 0;
+        border-right: 0;
     }
 `
 
